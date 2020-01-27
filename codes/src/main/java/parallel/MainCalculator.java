@@ -25,22 +25,5 @@ public class MainCalculator {
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.pack();
         window.setVisible(true);
-        Thread thread = new Thread(){
-            @Override
-            public void run() {
-                while(true){
-                    System.out.println();
-                    for (Thread t : Thread.getAllStackTraces().keySet()){
-                        System.out.println(t.getName());
-                    }
-                    try {
-                        this.sleep(10000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        };
-        thread.start();
     }
 }
